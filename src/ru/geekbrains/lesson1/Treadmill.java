@@ -7,7 +7,13 @@ public class Treadmill implements Obstacles{
         this.length = length;
     }
 
-    public int getValue() {
-        return length;
+    @Override
+    public boolean doIt(Sporters sporter) {
+        return (sporter.getMaxLength() >= length);
+    }
+
+    @Override
+    public String getInfo() {
+        return "пробежал " + length;
     }
 }

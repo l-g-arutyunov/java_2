@@ -7,7 +7,13 @@ public class Wall  implements Obstacles{
         this.height = height;
     }
 
-    public int getValue() {
-        return height;
+    @Override
+    public boolean doIt(Sporters sporter) {
+        return (sporter.getMaxHeight() >= height);
+    }
+
+    @Override
+    public String getInfo() {
+        return "прыгнул " + height;
     }
 }

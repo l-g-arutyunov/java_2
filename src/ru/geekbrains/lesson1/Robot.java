@@ -10,24 +10,17 @@ public class Robot implements Sporters {
     }
 
     @Override
-    public boolean doIt(Treadmill treadmill) {
-        System.out.print(Robot.class.getSimpleName() + " run: ");
-        if (treadmill.getValue() <= maxLength) {
-            System.out.println("true");
-            return true;
-        }
-        System.out.println("false");
-        return false;
+    public int getMaxLength() {
+        return maxLength;
     }
 
     @Override
-    public boolean doIt(Wall wall) {
-        System.out.print(Robot.class.getSimpleName() + " jump: ");
-        if (wall.getValue() <= maxHeight) {
-            System.out.println("true");
-            return true;
-        }
-        System.out.println("false");
-        return false;
+    public int getMaxHeight() {
+        return maxHeight;
+    }
+
+    @Override
+    public String getInfo() {
+        return "Робот (длина: " + maxLength + ", высота: " + maxHeight + ")";
     }
 }

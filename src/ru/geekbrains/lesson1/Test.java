@@ -16,14 +16,11 @@ public class Test {
         for (Sporters sporter : sporters) {
             for (Obstacles obstacle : obstacles) {
                 boolean result = false;
-                if (obstacle instanceof  Treadmill) {
-                    if (!sporter.doIt((Treadmill) obstacle)) {
-                        continue outer;
-                    }
-                } else {
-                    if (!sporter.doIt((Wall) obstacle));
-                        continue outer;
-                }
+               if(!obstacle.doIt(sporter)) {
+                   System.out.println(sporter.getInfo() + " не " + obstacle.getInfo());
+                   continue outer;
+               }
+               System.out.println(sporter.getInfo() + " " + obstacle.getInfo());
             }
         }
 
