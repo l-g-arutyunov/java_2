@@ -20,4 +20,10 @@ public class MainController {
         textArea.setText(textArea.getText() +  '\n' + "You: " +message.getText());
         message.setText("");
     }
+
+    @FXML
+    private void enter(ActionEvent event) {
+        textArea.setText(textArea.getText() +  '\n' + "You: " +message.getText());
+        message.setText("");
+    }
 }

@@ -19,7 +19,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></TextArea>
-                  <TextField fx:id="message" layoutX="8.0" layoutY="359.0" prefHeight="25.0" prefWidth="300.0" />
+                  <TextField fx:id="message" layoutX="8.0" layoutY="359.0" onAction="#enter" prefHeight="25.0" prefWidth="300.0" />
                   <Button fx:id="send" layoutX="320.0" layoutY="359.0" mnemonicParsing="false" onAction="#click" prefHeight="25.0" prefWidth="77.0" text="send" />
                </children>
             </AnchorPane>
